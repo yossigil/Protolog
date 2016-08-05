@@ -1,4 +1,4 @@
-package org.spartan.protolog;
+package il.org.spartan.protolog;
 
 import static org.junit.Assert.*;
 
@@ -6,10 +6,10 @@ import java.util.*;
 
 import org.junit.*;
 import org.junit.runners.*;
-import org.spartan.protolog.Term.*;
-import org.spartan.protolog.Term.Atom.*;
-
 import il.org.spartan.iterables.*;
+import il.org.spartan.protolog.*;
+import il.org.spartan.protolog.Term.*;
+import il.org.spartan.protolog.Term.Atom.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) //
 @SuppressWarnings({ "javadoc", "nls", }) //

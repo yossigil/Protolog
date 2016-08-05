@@ -1,4 +1,4 @@
 @NonNullByDefault
-package org.spartan.protolog;
+package il.org.spartan.protolog;
 
 import org.eclipse.jdt.annotation.*;

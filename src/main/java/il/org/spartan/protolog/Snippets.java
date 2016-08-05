@@ -1,11 +1,10 @@
-package org.spartan.protolog;
+package il.org.spartan.protolog;
 
 import java.util.*;
 
 import org.eclipse.jdt.annotation.*;
-import org.spartan.protolog.Term.Atom.*;
-
 import il.org.spartan.*;
+import il.org.spartan.protolog.Term.Atom.*;
 
 public interface Snippets extends Set<Snippet> {
 	default boolean add(final String s) {

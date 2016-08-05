@@ -1,11 +1,10 @@
-package org.spartan.protolog;
+package il.org.spartan.protolog;
 
 import java.util.*;
 
 import org.eclipse.jdt.annotation.*;
-import org.spartan.protolog.Term.*;
-
 import il.org.spartan.*;
+import il.org.spartan.protolog.Term.*;
 
 interface Unifier {
 	static @Nullable Iterable<Replacement> mostGeneral(final Term... ts) {

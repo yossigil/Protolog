@@ -1,7 +1,7 @@
-package org.spartan.protolog;
+package il.org.spartan.protolog;
 
 import org.eclipse.jdt.annotation.*;
-import org.spartan.protolog.Term.Atom.*;
+import il.org.spartan.protolog.Term.Atom.*;
 
 public class Replacement {
 	public final @NonNull Variable variable;

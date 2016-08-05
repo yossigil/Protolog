@@ -1,4 +1,4 @@
-package org.spartan.protolog;
+package il.org.spartan.protolog;
 
 import il.org.spartan.*;
 import il.org.spartan.misc.*;

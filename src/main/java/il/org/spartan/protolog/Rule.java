@@ -1,4 +1,4 @@
-package org.spartan.protolog;
+package il.org.spartan.protolog;
 
 import java.util.*;
 
