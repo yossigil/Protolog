@@ -12,7 +12,7 @@ public class Symbol extends Wrapper<String> {
     super(check(symbol));
   }
   public Symbol(final Symbol other) {
-    super(other.t);
+    super(other.inner);
   }
   @Override public Symbol clone() throws CloneNotSupportedException {
     return (Symbol) Utils.cantBeNull(super.clone());

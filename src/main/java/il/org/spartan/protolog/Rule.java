@@ -13,7 +13,7 @@ public class Rule {
   }
   public Rule(final Term.Compound head, final Term.Compound... body) {
     this.head = head;
-    this.body = Utils.cantBeNull(Arrays.asList(body));
+    this.body = Utils.cantBeNull(as.list(body));
   }
   @SuppressWarnings("nls") @Override public String toString() {
     return "" + head + beginning.with(" :- ").separate(body).by(", ") + ".";

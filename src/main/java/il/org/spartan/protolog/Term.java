@@ -76,14 +76,14 @@ public interface Term extends Iterable<Term>, Cloneable {
   final class Compound extends Symbol implements Term {
     public final @NonNull Terms ts;
     public Compound(final String symbol, final Term... ts) {
-      this(new Symbol(symbol), Utils.cantBeNull(Arrays.asList(ts)));
+      this(new Symbol(symbol), Utils.cantBeNull(as.list(ts)));
     }
     public Compound(final Symbol symbol, final List<Term> ts) {
       super(symbol);
       this.ts = new Terms(ts);
     }
     public Compound(final Symbol symbol, final Term... ts) {
-      this(symbol, Utils.cantBeNull(Arrays.asList(ts)));
+      this(symbol, Utils.cantBeNull(as.list(ts)));
     }
     public int arity() {
       return length();
@@ -95,7 +95,7 @@ public interface Term extends Iterable<Term>, Cloneable {
       return new Compound(this, $);
     }
     @Override public @Nullable Replacement compositeReplacement(final Compound c) {
-      if (ts.size() != c.ts.size() || !c.t.equals(t))
+      if (ts.size() != c.ts.size() || !c.inner.equals(inner))
         return null;
       for (int ¢ = 0; ¢ < ts.size(); ++¢) {
         final Replacement $ = ts.get(¢).firstReplacement(Utils.cantBeNull(c.ts.get(¢)));
@@ -112,7 +112,7 @@ public interface Term extends Iterable<Term>, Cloneable {
           return false;
       return true;
     }
-    public final boolean equals(final Wrapper<?> w) {
+    @Override public final boolean equals(final Wrapper<?> w) {
       return super.equals(w) && equals((Compound) w);
     }
     public Term get(final int i) {
