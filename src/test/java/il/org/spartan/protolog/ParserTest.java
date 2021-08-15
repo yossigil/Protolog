@@ -14,8 +14,9 @@ public class ParserTest {
   /**
    * This test checks that that static parsing function (Parser.parse()) exists.
    */
+  @SuppressWarnings("unused")
   @Test public void testParserExists() {
-    Parser.parse("a");
+    Term a = Parser.parse("a");
   }
 
   /**
